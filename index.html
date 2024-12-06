@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pokémon QR Code Generator</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+	<header>
+    	<h1>Pokémon QR Code Generator</h1>
+    	<p>Select a Pokémon to learn more about its environmental cause!</p>
+	</header>
+	<main>
+    	<section class="pokemon-selection">
+        	<div class="pokemon" id="squirtle" onclick="showDescription('squirtle')">
+            	<img src="squirtle.png" alt="Squirtle">
+            	<p>Squirtle</p>
+        	</div>
+        	<div class="pokemon" id="psyduck" onclick="showDescription('psyduck')">
+            	<img src="psyduck.png" alt="Psyduck">
+            	<p>Psyduck</p>
+        	</div>
+        	<div class="pokemon" id="poliwag" onclick="showDescription('poliwag')">
+            	<img src="poliwag.png" alt="Poliwag">
+            	<p>Poliwag</p>
+        	</div>
+        	<div class="pokemon" id="gyarados" onclick="showDescription('gyarados')">
+            	<img src="gyarados.png" alt="Gyarados">
+            	<p>Gyarados</p>
+        	</div>
+        	<div class="pokemon" id="oshawott" onclick="showDescription('oshawott')">
+            	<img src="oshawott.png" alt="Oshawott">
+            	<p>Oshawott</p>
+        	</div>
+        	<div class="pokemon" id="quagsire" onclick="showDescription('quagsire')">
+            	<img src="quagsire.png" alt="Quagsire">
+            	<p>Quagsire</p>
+        	</div>
+        	<div class="pokemon" id="vaporeon" onclick="showDescription('vaporeon')">
+            	<img src="vaporeon.png" alt="Vaporeon">
+            	<p>Vaporeon</p>
+        	</div>
+        	<div class="pokemon" id="greninja" onclick="showDescription('greninja')">
+            	<img src="greninja.png" alt="Greninja">
+            	<p>Greninja</p>
+        	</div>
+    	</section>
+	</main>
+	<footer>
+    	<p>Made for Nuit de l'Info 2024</p>
+        <p>&copy; 2024 EPI_NINTENDO.</p>
+	</footer>
+	<div id="popup" class="popup">
+    	<div class="popup-content">
+        	<p id="description"></p>
+        	<div class="qr-container" id="qr-container">
+            	<canvas id="qrcode"></canvas>
+            	<img id="qr-image" src="" alt="Pokémon">
+        	</div>
+        	<div class="button-container">
+            	<button onclick="generateQRCode()">Generate QR Code</button>
+            	<button onclick="closePopup()">Close</button>
+        	</div>
+    	</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
